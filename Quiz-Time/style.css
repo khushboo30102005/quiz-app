@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #F6F4F0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.quiz-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 300px;
+}
+
+.quiz-time img {
+  width: 100%;
+}
+
+.start-now {
+  text-align: center;
+  background-color: #35BD3A;
+  color: #FFFFFF;
+  font-size: 36px;
+  padding: 10px;
+  border-radius: 9px;
+  box-shadow: 7px 10px 1px 2px #01AB08;
+  cursor: pointer;
+}
+
+.quiz-score {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+}
+
+
+
+
+.quiz-start .quiz-time {
+  transform: scale(0);
+}
+
+.quiz-start .quiz-section {
+  display: block;
+}
+
+.quiz-section {
+  display: none;
+  margin: auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.header-img {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.quiz-img {
+  max-width: 150px;
+  width: 100%;
+}
+
+.volume {
+  max-width: 24px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wrong-msg {
+  font-size: 8px;
+  margin-left: auto;
+  margin-right: 9px;
+  margin-top: 2px;
+}
+
+.question-count,
+.timer {
+  background-color: #FEC33D;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 7px;
+  margin-block: -5px;
+  margin-left: 86%;
+}
+
+.question-count {
+  box-shadow: 0 0 0 2px #fec33da1;
+}
+
+.timer {
+  background-color: #02A4096E;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 2px #02a40957;
+
+}
+
+.quiz-Question {
+  font-size: 12px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px #F5F5F57A;
+
+}
+
+.option-section {
+  background-color: #f5f5f5db;
+  margin-top: 20px;
+  box-shadow: 0 0 0 5px #F5F5F57A;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #F5F5F57A;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  margin: 15px;
+}
+
+.next-btn {
+  color: #01AB08;
+  margin-left: 86%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.answer-react {
+  max-width: 13px;
+}
+
+.right {
+  border: 1.5px solid #35BD3A;
+}
+
+.wrong {
+  border: 1.5px solid #FF7A7A;
+}
+
+
+.quiz-start .quiz-section.submitted {
+  display: none;
+}
+
+.result-section {
+  display: none;
+}
+
+
+.result-heading {
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.result-section img {
+  width: 100%;
+}
+
+.result-text {
+  margin-top: -16px;
+  margin-left: 21px;
+  font-weight: 600;
+}
+
+.result-score {
+  text-align: center;
+  color: #0ac222;
+}
+
+.dashboard-container {
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.result-dashboard {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #EB4545;
+  display: flex;
+
+}
+
+.right-result {
+  width: 75%;
+  background-color: #35BD3A;
+  border-radius: 4px 3px 3px 4px;
+}
+
+
+
+.wrong-result {
+  width: 25%;
+  background-color: #EB4545;
+}
+
+.color-assignment {
+  display: flex;
+  gap: 5px;
+  margin-top: 17px;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  width: 8px;
+  height: 8px;
+  background-color: #01AB08;
+  border-radius: 10px
+}
+
+.red {
+  width: 8px;
+  height: 8px;
+  background-color: #EB4545;
+  margin-left: 20px;
+  border-radius: 10px
+}
+
+.congrats {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.retry {
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+  padding: 9px;
+  color: #fff;
+  background-color: #01AB08;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #01ab08cc;
+  margin-top: 35px;
+}
+
+@media(max-width:768px) {
+  .quiz-time {
+    max-width: 180px;
+    /* margin-top: 50%; */
+  }
+
+  .start-now {
+    font-size: 16px;
+  }
+
+  .quiz-score {
+    font-size: 12px;
+    margin-top: 35px;
+  }
+
+  .quiz-section {
+    max-width: 80%;
+  }
+
+  .quiz-Question,
+  .option {
+    font-size: 12px;
+  }
+
+  .question-count,
+  .timer,
+  .next-btn {
+    font-size: 12px;
+  }
+}
