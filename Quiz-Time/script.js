@@ -14,10 +14,11 @@ const timer = document.querySelector('.timer')
 const quizSection = document.querySelector('.quiz-section')
 const resultSection = document.querySelector('.result-section')
 const rightPercentage = document.querySelector('.right-percentage')
-const wrongPercentage= document.querySelector('.wrong-percentage')
+const wrongPercentage = document.querySelector('.wrong-percentage')
 const resultScore = document.querySelector('.result-score')
 const greenResult = document.querySelector('.right-result')
 const redResult = document.querySelector('.wrong-result')
+const retryBtn = document.querySelector('.retry')
 
 // ALL QUIZ QUESTIONS ARE STORED IN AN ARRAY OF OBJECT LIKE THAT:
 
@@ -156,7 +157,24 @@ const quizData = JSON.parse(localStorage.getItem('quizData')) || [
 
 let totalQuestion = quizData.length
 
+quizData.forEach((quiz) => {
+  retryBtn.addEventListener('click', () =>{
+ quiz.userAnswer = null
+  })
+    
+})
+retryBtn.addEventListener('click', () => {
+  quizSection.classList.remove('submitted')
+  resultSection.style.display = 'none'
+  document.body.style.backgroundColor = '#CCE2C2'
+  currentQuestionIndex = 0
+  quizData.forEach((quiz) => {
+    const currentQuestion = quizData[currentQuestionIndex]
+    displayQuestion()
+  })
 
+
+})
 // SHOW MSG WHEN USER CHOOSES WRONG OPTION ==>
 
 function createWrongMsg() {
@@ -168,7 +186,7 @@ function createWrongMsg() {
 startNowBtn.addEventListener('click', () => {
   document.body.style.backgroundColor = '#CCE2C2'
   frontPage.classList.add('quiz-start')
-  
+
 })
 
 // ADD SOUND EFFECT ==>
@@ -267,6 +285,10 @@ function displayQuestion() {
     // quizSection.classList.add('submitted')
 
   }
+  else{
+    nextBtn.innerText = 'next>>>'
+  }
+  pointerOnNextBtn()
 
 }
 
@@ -298,9 +320,11 @@ displayQuestion()
 function nextQuestion() {
   currentQuestionIndex++
   if (currentQuestionIndex < totalQuestion) {
-
     displayQuestion()
-  } 
+  }
+  else  if(currentQuestionIndex = totalQuestion){
+    displayResult()
+  }
 
 }
 
@@ -334,20 +358,22 @@ function checkAnswer(e) {
     }
   }
 
+
+
   localStorage.setItem('quizData', JSON.stringify(quizData))
 
 }
 
-function displayResult(){
- let userScore =  quizData.filter((quiz) => {
-   return quiz.userAnswer.isCorrect === true
-}).length
-  rightPercentage.innerText = `${userScore/totalQuestion*100}%`
-  wrongPercentage.innerText = `${100-userScore/totalQuestion*100}%`
+function displayResult() {
+  let userScore = quizData.filter((quiz) => {
+    return quiz.userAnswer.isCorrect === true
+  }).length
+  rightPercentage.innerText = `${userScore / totalQuestion * 100}%`
+  wrongPercentage.innerText = `${100 - userScore / totalQuestion * 100}%`
   resultScore.innerText = `Your Score is: ${userScore}/${totalQuestion}`
-  greenResult.style.width = `${userScore/totalQuestion*100}%`
+  greenResult.style.width = `${userScore / totalQuestion * 100}%`
   // redResult.style.width = `${100-userScore/totalQuestion*100}%`
-  if(greenResult.style.width === '100%'){
+  if (greenResult.style.width === '100%') {
     redResult.style.display = 'none'
   }
 }
@@ -355,13 +381,27 @@ function displayResult(){
 
 option.forEach((option) => {
   option.addEventListener('click', checkAnswer)
+  option.addEventListener('click', pointerOnNextBtn)
 
 })
+
+function pointerOnNextBtn() {
+  const currentQuestion = quizData[currentQuestionIndex]
+  if (currentQuestion.userAnswer === null) {
+    nextBtn.classList.add('disabled')
+    nextBtn.classList.remove('able')
+  } else if (currentQuestion.userAnswer) {
+    nextBtn.classList.remove('disabled')
+    nextBtn.classList.add('able')
+  }
+}
+
+
 
 
 nextBtn.addEventListener('click', nextQuestion)
 
-nextBtn.addEventListener('click', ()=> {
+nextBtn.addEventListener('click', () => {
   if (currentQuestionIndex === totalQuestion) {
     quizSection.classList.add('submitted')
     resultSection.style.display = 'block'
