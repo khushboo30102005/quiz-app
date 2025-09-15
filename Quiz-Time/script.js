@@ -48,111 +48,111 @@ const quizData = JSON.parse(localStorage.getItem('quizData')) || [
     options: ["null", "object", "undefined", "string"],
     answer: 1
   },
-  // {
-  //   question: "Which operator is used to compare both value and type?",
-  //   options: ["=", "==", "===", "!=="],
-  //   answer: 2
-  // },
-  // {
-  //   question: "What does NaN stand for in JavaScript?",
-  //   options: ["Not a Name", "Not a Null", "Not a Number", "No Any Number"],
-  //   answer: 2
-  // },
-  // {
-  //   question: "Which keyword is used to define a constant in JavaScript?",
-  //   options: ["let", "var", "const", "define"],
-  //   answer: 2
-  // },
-  // {
-  //   question: "Which of the following is NOT a JavaScript data type?",
-  //   options: ["Number", "Boolean", "Character", "Undefined"],
-  //   answer: 2
-  // },
-  // {
-  //   question: "Which function is used to parse a string into an integer?",
-  //   options: ["Number()", "parseInt()", "parseFloat()", "String()"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "What is the output of '5' + 2 in JavaScript?",
-  //   options: ["7", "52", "Error", "NaN"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "What is the default value of an uninitialized variable in JavaScript?",
-  //   options: ["null", "undefined", "0", "false"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which method is used to remove the last element of an array?",
-  //   options: ["shift()", "pop()", "push()", "splice()"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which method is used to add elements at the end of an array?",
-  //   options: ["push()", "pop()", "shift()", "unshift()"],
-  //   answer: 0
-  // },
-  // {
-  //   question: "Which function is used to convert JSON to a JavaScript object?",
-  //   options: ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.convert()"],
-  //   answer: 0
-  // },
-  // {
-  //   question: "Which of the following is a looping structure in JavaScript?",
-  //   options: ["for", "while", "do…while", "All of the above"],
-  //   answer: 3
-  // },
-  // {
-  //   question: "What will Boolean(0) return?",
-  //   options: ["true", "false", "null", "undefined"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which method is used to join array elements into a string?",
-  //   options: ["concat()", "join()", "toString()", "push()"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which company developed JavaScript?",
-  //   options: ["Microsoft", "Netscape", "Google", "IBM"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which event is fired when a user clicks on an HTML element?",
-  //   options: ["onmouseover", "onclick", "onchange", "onsubmit"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which function is used to execute code after a delay?",
-  //   options: ["setTimeout()", "setInterval()", "delay()", "wait()"],
-  //   answer: 0
-  // },
-  // {
-  //   question: "What will be the output of 2 + '2'?",
-  //   options: ["4", "'22'", "NaN", "Error"],
-  //   answer: 1
-  // },
-  // {
-  //   question: "Which method is used to find the length of a string?",
-  //   options: ["size()", "count()", "length", "len()"],
-  //   answer: 2
-  // },
-  // {
-  //   question: "Which keyword is used to exit a loop in JavaScript?",
-  //   options: ["exit", "stop", "break", "continue"],
-  //   answer: 2
-  // },
-  // {
-  //   question: "Which of the following is true about const variables?",
-  //   options: [
-  //     "Value can be reassigned",
-  //     "Scope is global only",
-  //     "Must be initialized at the time of declaration",
-  //     "Can be declared without a value"
-  //   ],
-  //   answer: 2
-  // }
+  {
+    question: "Which operator is used to compare both value and type?",
+    options: ["=", "==", "===", "!=="],
+    answer: 2
+  },
+  {
+    question: "What does NaN stand for in JavaScript?",
+    options: ["Not a Name", "Not a Null", "Not a Number", "No Any Number"],
+    answer: 2
+  },
+  {
+    question: "Which keyword is used to define a constant in JavaScript?",
+    options: ["let", "var", "const", "define"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT a JavaScript data type?",
+    options: ["Number", "Boolean", "Character", "Undefined"],
+    answer: 2
+  },
+  {
+    question: "Which function is used to parse a string into an integer?",
+    options: ["Number()", "parseInt()", "parseFloat()", "String()"],
+    answer: 1
+  },
+  {
+    question: "What is the output of '5' + 2 in JavaScript?",
+    options: ["7", "52", "Error", "NaN"],
+    answer: 1
+  },
+  {
+    question: "What is the default value of an uninitialized variable in JavaScript?",
+    options: ["null", "undefined", "0", "false"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to remove the last element of an array?",
+    options: ["shift()", "pop()", "push()", "splice()"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to add elements at the end of an array?",
+    options: ["push()", "pop()", "shift()", "unshift()"],
+    answer: 0
+  },
+  {
+    question: "Which function is used to convert JSON to a JavaScript object?",
+    options: ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.convert()"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a looping structure in JavaScript?",
+    options: ["for", "while", "do…while", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "What will Boolean(0) return?",
+    options: ["true", "false", "null", "undefined"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to join array elements into a string?",
+    options: ["concat()", "join()", "toString()", "push()"],
+    answer: 1
+  },
+  {
+    question: "Which company developed JavaScript?",
+    options: ["Microsoft", "Netscape", "Google", "IBM"],
+    answer: 1
+  },
+  {
+    question: "Which event is fired when a user clicks on an HTML element?",
+    options: ["onmouseover", "onclick", "onchange", "onsubmit"],
+    answer: 1
+  },
+  {
+    question: "Which function is used to execute code after a delay?",
+    options: ["setTimeout()", "setInterval()", "delay()", "wait()"],
+    answer: 0
+  },
+  {
+    question: "What will be the output of 2 + '2'?",
+    options: ["4", "'22'", "NaN", "Error"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to find the length of a string?",
+    options: ["size()", "count()", "length", "len()"],
+    answer: 2
+  },
+  {
+    question: "Which keyword is used to exit a loop in JavaScript?",
+    options: ["exit", "stop", "break", "continue"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is true about const variables?",
+    options: [
+      "Value can be reassigned",
+      "Scope is global only",
+      "Must be initialized at the time of declaration",
+      "Can be declared without a value"
+    ],
+    answer: 2
+  }
 ];
 
 let totalQuestion = quizData.length
